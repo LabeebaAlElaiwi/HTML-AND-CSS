@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Labeeba AlElaiwi - Portfolio</title>
+
+<style>
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #2e7d32;
+    color: white;
+    padding: 10px 0;
+    z-index: 1000;
+}
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+.navbar ul li {
+    margin: 0 20px;
+}
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.navbar ul li a:hover {
+    text-decoration: underline;
+    color: #a5d6a7;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    margin-top: 60px;
+}
+.hero img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2.5rem;
+    background-color: rgba(0, 100, 0, 0.6);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+/* Centered Image */
+.image-section {
+    text-align: center;
+    margin: 30px 0;
+}
+.profile-image {
+    width: 200px;
+    border-radius: 50%;
+    filter: grayscale(30%);
+}
+
+/* Table Styling */
+table {
+    margin: 30px auto;
+    border-collapse: collapse;
+    width: 60%;
+}
+th, td {
+    border: 2px solid #4caf50;
+    padding: 12px;
+    text-align: center;
+}
+thead {
+    background-color: #a5d6a7;
+}
+
+/* Two Column Layout */
+.columns {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+}
+.column {
+    width: 40%;
+    height: 200px;
+    color: #1b5e20;
+}
+
+/* Paragraph Hover */
+.hover-para {
+    text-align: center;
+    margin: 30px;
+    font-size: 1.2rem;
+}
+.hover-para:hover {
+    color: #2e7d32;
+    font-style: italic;
+}
+
+/* Image Overlay Fade */
+.overlay-container {
+    position: relative;
+    width: 50%;
+    margin: 30px auto;
+}
+.overlay-container img {
+    width: 100%;
+    display: block;
+}
+.overlay-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: rgba(46, 125, 50, 0.7);
+    opacity: 0;
+    transition: 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    border-radius: 10px;
+}
+.overlay-container:hover .overlay-text {
+    opacity: 1;
+}
+
+/* Video Section */
+.video-section {
+    margin: 30px auto;
+    width: 80%;
+}
+.video-section video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Video with Text Overlay */
+.video-overlay {
+    position: relative;
+    margin: 30px auto;
+    width: 80%;
+}
+.video-overlay video {
+    width: 100%;
+    border-radius: 10px;
+}
+.video-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2rem;
+    background-color: rgba(0, 100, 0, 0.6);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #2e7d32;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+}
+
+</style>
+</head>
+<body>
+
+    <!-- Fixed Navbar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#">Portfolio</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section with Text Over Image -->
+    <section class="hero">
+        <img src="https://cdn.pixabay.com/photo/2025/08/27/13/25/sunset-9799933_1280.jpg" alt="Background">
+        <div class="hero-text">Welcome to Labeeba AlElaiwi's Portfolio</div>
+    </section>
+
+    <!-- Centered Image with Filter and Rounded Edges -->
+    <section class="image-section">
+        <img src="https://cdn.pixabay.com/photo/2025/08/29/14/04/woman-9804056_1280.png" alt="Labeeba" class="profile-image">
+    </section>
+
+    <!-- Table Section -->
+    <section>
+        <table>
+            <thead>
+                <tr>
+                    <th>Course</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Web Development</td>
+                    <td>A</td>
+                </tr>
+                <tr>
+                    <td>Pyton Programming</td>
+                    <td>A+</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Two Column Layout -->
+    <section class="columns">
+        <div class="column left">
+            <h3>About Me</h3>
+            <p>I am a student passionate about web development and design.</p>
+        </div>
+        <div class="column right">
+            <h3>Skills</h3>
+            <p>HTML, CSS, Python.</p>
+        </div>
+    </section>
+
+    <!-- Paragraph with Hover Effect -->
+    <p class="hover-para">Hover over this paragraph to see the effect!</p>
+
+    <!-- Image Overlay Fade -->
+    <div class="overlay-container">
+        <img src="https://cdn.pixabay.com/photo/2025/09/01/11/44/kathedrale-reims-9809389_1280.jpg" alt="Overlay">
+        <div class="overlay-text">Image Overlay</div>
+    </div>
+
+    <!-- Video Autoplay Muted Loop -->
+    <section class="video-section">
+        <video autoplay muted loop>
+            <source src="https://cdn.pixabay.com/video/2023/04/21/159948-820010982_tiny.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <!-- Video with Text Overlay -->
+    <section class="video-overlay">
+        <video autoplay muted loop>
+            <source src="https://cdn.pixabay.com/video/2023/04/21/159948-820010982_tiny.mp4" type="video/mp4">
+        </video>
+        <div class="video-text">Creating With Passion</div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Labeeba AlElaiwi. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
